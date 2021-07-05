@@ -10,19 +10,23 @@ class Lista2 extends React.Component{
       {id: 2, nome: 'item2', completo: false},
       {id: 3, nome: 'item3', completo: true},
       {id: 4, nome: 'item4', completo: false},
-      {id: 5, nome: 'item4', completo: true},
+      {id: 5, nome: 'item5', completo: true},
     ]
   }
 
   render(){
     return (
+      <>
       <ul>
+      {React.Children.map(child => child.type == Item ? child : null)}
+        <div>{this.props.children}</div> 
         {this.state.map(item => (
           <Item id={item.id} completo={item.completo}>
             {item.nome}
           </Item>
         ))}
       </ul>
+       </>
     )
    }
 }
@@ -43,4 +47,4 @@ class Item extends React.Component{
   }
 }
 
-export default Lista2;
+export {Lista2, Item};
