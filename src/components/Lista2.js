@@ -18,7 +18,7 @@ class Lista2 extends React.Component{
     return (
       <>
       <ul>
-      {React.Children.map(child => child.type == Item ? child : null)}
+        {React.Children.map(this.props.children, child => child.type == Item ? child : null)}
         <div>{this.props.children}</div> 
         {this.state.map(item => (
           <Item id={item.id} completo={item.completo}>
