@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Comp title="meu título"> Vai se fudeeeeeee
+    <Comp title="meu título"> Vai
 
       
     </Comp>
